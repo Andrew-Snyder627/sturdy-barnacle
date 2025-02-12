@@ -26,4 +26,20 @@ class Team
     def total_value #taking the total_cost of each player in the array and summing for total_value
         @roster.sum {|player| player.total_cost}
     end
+
+    def details
+        {
+        "total value" => total_value,
+        "player count" => player_count
+        }
+    end
+
+    def average_cost_of_player #stumped on adding the commas
+       (total_value / player_count).to_s
+    end
+
+    def players_by_last_name #Didn't finish here
+        @roster.sort_by {|player| player.last_name}
+    end
+
 end
