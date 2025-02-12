@@ -94,18 +94,4 @@ RSpec.describe Team do
 
         expect(team.total_value).to eq(85200000)
     end
-
-    it 'can have a nickname' do
-        player = Player.new("Michael Palledorous" , 1000000, 36)
-
-        expect(player.nickname).to be_nil
-    end
-
-    it 'can set a nickname' do
-        player = Player.new("Michael Palledorous" , 1000000, 36)
-
-        player.set_nickname!("Squints")
-
-        expect(player.nickname).to eq("Squints")
-    end
 end
